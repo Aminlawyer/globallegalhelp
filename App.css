@@ -1,39 +1,117 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, white, #f1f5f9);
   margin: 0;
-  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+  color: #333;
+}
+
+.page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
 }
 
-.container {
+.header nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 3rem 2rem;
   text-align: center;
-  max-width: 500px;
-  width: 100%;
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-input {
+.hero h1 {
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+.hero p {
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form input {
   padding: 0.75rem;
-  width: 100%;
-  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #1e40af;
+.form button {
+  background-color: #1e3a8a;
   color: white;
   border: none;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-weight: 600;
+}
+
+.form button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.feature-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  text-align: center;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2rem;
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+}
+
+.socials a {
+  color: #dbeafe;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header nav a {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
